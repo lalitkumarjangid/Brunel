@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './Pages/Home';
 import Signup from './Pages/signup';
 import Submit from './Pages/Submit';
+import * as errorpage from './Pages/errorpage';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/submit" element={<Submit />} />
+          <Route path="*" element={<errorpage.default />} />
 
         </Routes>
       </BrowserRouter>
